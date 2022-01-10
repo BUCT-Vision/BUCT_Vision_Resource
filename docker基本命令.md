@@ -14,6 +14,8 @@ https://cloud.tencent.com/developer/article/1541709
 docker images  # 查看服务器中镜像
 docker container ls  # 查看所有正在运行的容器
 docker container ls -a  # 查看所有容器（包括已经停止的）
+docker ps  # 等于docker container ls
+docker ps -a  # 等于docker container ls -a
 ```
 
 如果本地没有基础的镜像，可以通过`https://hub.docker.com/`查询网络仓库中可用镜像，建议使用官方提供的镜像
