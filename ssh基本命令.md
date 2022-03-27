@@ -38,7 +38,9 @@ ssh victoria@192.168.1.1:22
 ssh -J <jump_user_name>@<jump_ip_address> <user_name>@<ip_address>
 
 # 示例
-ssh -J victorcia@192.168.1.1:112 victoria@192.168.1.2
+ssh -J victoria@192.168.1.1:112 victoria@192.168.1.2
+# ssh支持多次跳转，用“,”连接
+ssh -J victoria@192.168.1.1:123,victoria@192.168.2.1:231 victoria@192.168.1.2
 ```
 
 ### 将远程服务器的端口映射到本地
@@ -61,17 +63,31 @@ ssh -L 6007:localhost:6006 victoria@192.168.1.1 -fN
 
 ## 服务器文件上传/下载
 
+### 使用scp进行文件传输
+
 最基础的命令行操作方式:
 
 ```shell
 # 把文件从source传输到dst，-r表示支持传输目录，单个文件传输可以不加
-scp -r [src_username]@[src ip address]:/abs/dir/to/src/file [target_username]@[target ip address]:/abs/dir/to/target/file
+scp -r <src_username>@<src ip address>:/abs/dir/to/src/file <target_username>@<target ip address>:/abs/dir/to/target/file
 
 # 文件传输示例
 scp -r victoria@192.168.1.1:/home/jiarunliu fgldlb@192.168.1.2:/home/Documents/
 ```
 
 文件传输建议使用`FileZilla`、`Xftp`等软件，不需要敲命令方便使用。
+
+### 使用跳板机进行scp文件传输
+
+需要通过跳板机进行scp文件传输时，需通过`-o “ProxyJump”`参数指定跳板机:
+
+```shell
+# 通过跳板机把文件从source传输到dst，ProxuJump后为跳板机
+scp -o "ProxyJump <jump_user_name>@<jump_ip_address>" -r <src_username>@<src ip address>:/abs/dir/to/src/file <target_username>@<target_ip_address>:/abs/dir/to/target/fileaddress]:/abs/dir/to/target/file
+
+# 通过跳板机scp文件传输示例
+scp -o "ProxyJump victoria@192.168.2.1" -r victoria@192.168.1.1:/home/jiarunliu fgldlb@192.168.1.2:/home/Documents/
+```
 
 ## 密钥连接
 
@@ -127,4 +143,3 @@ ssh orange
 ## 使用公网连接服务器
 
 如有公网连接的使用需求，请私聊[管理员](jiarunliu@foxmail.com)获取详细信息。
-
