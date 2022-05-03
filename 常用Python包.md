@@ -24,6 +24,8 @@
   - 更多框架可见[**介绍页**](https://openmmlab.com/codebase): MMRotate, MMDeploy, MMRazor, MMHuman3D, MMFlow, **MMFewShot**, MMAction2, **MMClassification**, **MMSegmentation**, MMDetection3D, MMEditing, MMPose, MMTracking, MMOCR, MMGeneration
 
 - solo-learn [[doc](https://solo-learn.readthedocs.io/en/latest/index.html)] [[github](https://github.com/vturrisi/solo-learn)] (自监督学习, 基于PyTorch Lightning)
+- PyG (PyTorch Geometric) [[doc](https://pytorch-geometric.readthedocs.io/en/latest/)] [[github](https://github.com/pyg-team/pytorch_geometric)] (图神经网络)
+- DGL (Deep Graph Library) [[doc](https://docs.dgl.ai/index.html)] [[github](https://github.com/dmlc/dgl)] (图神经网络库)
 
 ## 训练数据记录
 
@@ -37,3 +39,4 @@
 - MLxtend [[homepage](http://rasbt.github.io/mlxtend/)] [[doc](http://rasbt.github.io/mlxtend/)] [[github](https://github.com/rasbt/mlxtend)]
 
 - SHAP [[homepage](http://rasbt.github.io/mlxtend/)] [[doc](https://shap.readthedocs.io/en/latest/index.html)] [[github](https://github.com/slundberg/shap)]
+- grad-cam [[PyPI](https://pypi.org/project/grad-cam/)] [[github](https://github.com/jacobgil/pytorch-grad-cam)] (注意力可视化)
