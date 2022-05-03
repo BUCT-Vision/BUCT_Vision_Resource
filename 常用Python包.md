@@ -31,6 +31,7 @@
 
 - TensorBoard [[homepage](https://www.tensorflow.org/tensorboard/)] [[doc](https://www.tensorflow.org/tensorboard/get_started)] [[github](https://github.com/tensorflow/tensorboard)]
 - wandb [[homepage](https://wandb.ai/site)] [[doc](https://docs.wandb.ai/)] [[github](https://github.com/wandb)] (功能丰富，支持各种可视化及训练管理，但没开源)
+- 更多[训练管理工具](https://cloud.tencent.com/developer/article/1935949)
 
 ## 模型解释性
 
