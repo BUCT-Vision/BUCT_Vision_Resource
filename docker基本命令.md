@@ -6,7 +6,7 @@ docker可以简单的理解为一个轻量级的虚拟机，我们将docker中�
 
 ## Docker安装
 
-https://cloud.tencent.com/developer/article/1541709
+请参考英伟达[官方安装文档](https://docs.nvidia.com/ai-enterprise/deployment-guide/dg-docker.html)
 
 ## 查看镜像与容器状态
 
